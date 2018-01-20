@@ -96,11 +96,13 @@ s3transfer==0.1.12
 scikit-learn==0.19.0
 scipy==0.19.1
 search-google==1.2.1
+semver==2.7.9
 simplegeneric==0.8.1
 six==1.11.0
 sklearn==0.0
 smart-open==1.5.5
 spacy==2.0.4
+sputnik==0.9.3
 SQLAlchemy==1.1.15
 tabulate==0.8.2
 tensorflow==1.4.0
