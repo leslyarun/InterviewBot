@@ -3,10 +3,7 @@ import pandas as pd
 import urllib.request
 from bs4 import BeautifulSoup
 from googlesearch import search
-import spacy
 import os
-import sputnik
-import spacy.about
 
 # package = sputnik.install('spacy', spacy.about.__version__, spacy.about.__download_url__)
 
