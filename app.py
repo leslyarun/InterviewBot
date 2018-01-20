@@ -87,7 +87,7 @@ def answerscore(req, qs_idx):
     qs = bot.random_question(qs_idx)
     answer = req.get("queryResult").get("queryText")
     ans_tokens = bot.answer_tokens(answer)
-    orig_ans_tokens = bot.original_ans_tokens()
+    orig_ans_tokens = bot.original_ans_tokens(qs_idx)
     simscore = bot.similarity_check(ans_tokens, orig_ans_tokens)
     keywords = bot.key_matching(qs_idx)
     keysimscore = bot.key_similarity_check(keywords, ans_tokens)

@@ -33,7 +33,7 @@ def answer_tokens(ans):
     return ans_tokens
 
 
-def original_ans_tokens(qs_idx, orig_ans):
+def original_ans_tokens(qs_idx):
     orig_ans = df['Answer'][qs_idx]
     orig_ans_tokens = nlp(orig_ans)
     return orig_ans_tokens
