@@ -8,7 +8,7 @@ import os
 import sputnik
 import spacy.about
 
-package = sputnik.install('spacy', spacy.about.__version__, spacy.about.__download_url__)
+# package = sputnik.install('spacy', spacy.about.__version__, spacy.about.__download_url__)
 
 # nlp = spacy.load('en_core_web_sm')
 import en_core_web_sm

@@ -101,8 +101,8 @@ simplegeneric==0.8.1
 six==1.11.0
 sklearn==0.0
 smart-open==1.5.5
-spacy==2.0.4
-sputnik==0.9.3
+spacy>=2.0.0,<3.0.0
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.0.0/en_core_web_sm-2.0.0.tar.gz#en_core_web_smsputnik==0.9.3
 SQLAlchemy==1.1.15
 tabulate==0.8.2
 tensorflow==1.4.0
