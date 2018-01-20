@@ -20,7 +20,6 @@ decorator==4.1.2
 dialogflow==0.1.0
 dill==0.2.6
 docutils==0.14
-
 entrypoints==0.2.3
 enum34==1.1.6
 Flask==0.12.2
@@ -125,4 +124,3 @@ win-unicode-console==0.5
 wincertstore==0.2
 wrapt==1.10.11
 xlrd==1.1.0
-xx-ent-wiki-sm==2.0.0
