@@ -65,6 +65,7 @@ def match_score(keywords, ans_tokens):
             print(k, 'is found in answer')
             matches += 1
     print('matches = ', matches)
+    return matches
 
 
 # Alternate score
