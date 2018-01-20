@@ -4,6 +4,7 @@ import urllib.request
 from bs4 import BeautifulSoup
 from googlesearch import search
 import os
+from urllib.request import Request, urlopen
 
 # package = sputnik.install('spacy', spacy.about.__version__, spacy.about.__download_url__)
 
@@ -93,7 +94,8 @@ def google_links(qs):
 def get_link_text(links):
     texts = []
     for link in links:
-        soup = BeautifulSoup(urllib.request.urlopen(link), "html5lib")
+        req = Request(link, headers={'User-Agent': 'Mozilla/5.0'})
+        soup = BeautifulSoup(urllib.request.urlopen(req), "html5lib")
         # print(soup.text)
         texts.append(soup.text)
 

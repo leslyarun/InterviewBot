@@ -18,6 +18,8 @@ app = Flask(__name__)
 copiedtracker = []
 scoretracker = []
 finaltext = []
+prev_idx = []
+ind = 0
 
 
 @app.route('/webhook', methods=['POST'])
@@ -63,8 +65,13 @@ def processRequest(req):
 
 def interview_qs(req):
     qs_idx = bot.random_qs_index()
-    copiedtracker.append(copiedornot(req, qs_idx))
-    scoretracker.append(answerscore(req, qs_idx))
+    prev_idx.append(qs_idx)
+    global ind
+    ind += 1
+    if req.get("queryResult").get("queryText") != "ok".lower():
+        copiedtracker.append(copiedornot(req, prev_idx[ind - 2]))
+        scoretracker.append(answerscore(req, prev_idx[ind - 2]))
+
     qs = bot.random_question(qs_idx)
     return {
         "fulfillmentText": qs
@@ -104,4 +111,4 @@ if __name__ == '__main__':
 
     print("Starting app on port %d" % port)
 
-    app.run(debug=True, port=port, host='0.0.0.0')
+    app.run(debug=False, port=port, host='0.0.0.0')
