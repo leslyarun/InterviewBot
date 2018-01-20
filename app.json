@@ -1,0 +1,12 @@
+{
+  "name": "InterviewBot Java",
+  "description": "InterviewBot Java webhook demonstration",
+  "repository": "https://github.com/leslyarun/InterviewBot",
+  "logo": "http://xvir.github.io/img/apiai.png",
+  "keywords": [
+    "dialogflow",
+    "python",
+    "bot",
+    "natural language"
+  ]
+}
