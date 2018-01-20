@@ -90,7 +90,7 @@ def get_link_text(links):
     texts = []
     for link in links:
         soup = BeautifulSoup(urllib.request.urlopen(link), "html5lib")
-        print(soup.text)
+        # print(soup.text)
         texts.append(soup.text)
 
     return texts
