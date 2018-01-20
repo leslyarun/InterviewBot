@@ -44,16 +44,15 @@ def processRequest(req):
 
     elif req.get("queryResult").get("action") == "bye":
         for index, item in enumerate(copiedtracker):
-            finaltext.append("""Here are the Test Results:
-                        Qs.""" + (index + 1) + """ - Answer copied - """ + item)
+            finaltext.append(
+                """Here are the Test Results: Qs.""" + str(index + 1) + """ - Answer copied - """ + str(item))
             print("""Here are the Test Results:
-            Qs.""" + (index + 1) + """ - Answer copied - """ + item)
+            Qs.""" + str(index + 1) + """ - Answer copied - """ + str(item))
 
         for index, item in enumerate(scoretracker):
-            finaltext.append("""Score for every answer:
-             Qs.""" + (index + 1) + """ - Score is """ + item)
+            finaltext.append("""Score for every answer: Qs.""" + str(index + 1) + """ - Score is """ + str(item))
             print("""Score for every answer:
-             Qs.""" + (index + 1) + """ - Score is """ + item)
+             Qs.""" + str(index + 1) + """ - Score is """ + str(item))
 
         return {
             "fulfillmentText": finaltext
@@ -105,4 +104,4 @@ if __name__ == '__main__':
 
     print("Starting app on port %d" % port)
 
-    app.run(debug=False, port=port, host='0.0.0.0')
+    app.run(debug=True, port=port, host='0.0.0.0')
