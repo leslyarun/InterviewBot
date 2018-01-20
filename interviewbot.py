@@ -6,7 +6,10 @@ from googlesearch import search
 import spacy
 import os
 
-nlp = spacy.load('en_core_web_sm')
+# nlp = spacy.load('en_core_web_sm')
+import en_core_web_sm
+
+nlp = en_core_web_sm.load()
 
 # Read the Qs.Bank Dump
 my_path = os.path.abspath(os.path.dirname(__file__))
