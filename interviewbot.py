@@ -71,8 +71,11 @@ def match_score(keywords, ans_tokens):
 # Alternate score
 def alternate_score(keywords, matches):
     total = len(keywords)
-    alt_score = total // matches
-    return alt_score
+    if matches != 0:
+        alt_score = total // matches
+        return alt_score
+    else:
+        return 0
 
 
 def google_links(qs):
