@@ -97,9 +97,12 @@ def get_link_text(links):
         req = Request(link, headers={'User-Agent': 'Mozilla/5.10'})
         req.add_header('Accept',
                        'application/json,text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8')
-        soup = BeautifulSoup(urllib.request.urlopen(req), "html5lib")
-        # print(soup.text)
-        texts.append(soup.text)
+        try:
+            soup = BeautifulSoup(urllib.request.urlopen(req), "html5lib")
+            # print(soup.text)
+            texts.append(soup.text)
+        except:
+            continue
 
     return texts
 
