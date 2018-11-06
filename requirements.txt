@@ -22,7 +22,7 @@ dill==0.2.6
 docutils==0.14
 entrypoints==0.2.3
 enum34==1.1.6
-Flask==0.12.2
+flask>=0.12.3
 Flask-SQLAlchemy==2.3.2
 ftfy==4.4.2
 future==0.16.0
